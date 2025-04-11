@@ -1,0 +1,200 @@
+/* Global */
+/* Make html and body cover the full screen */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease;
+}
+
+/* Light mode background */
+body {
+  background: linear-gradient(to right, #e3f2fd, #fce4ec);
+  color: #333;
+}
+
+/* Dark mode background */
+body.dark {
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  color: #fff;
+}
+
+/* App container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Optional smooth transition */
+body, .container {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+  
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #fce4ec);
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.app.dark {
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  color: #fff;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.4s ease;
+}
+
+.dark .container {
+  background: rgba(50, 50, 70, 0.6);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+header button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Dashboard */
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffffcc;
+  flex: 1;
+  min-width: 100px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.dark .card {
+  background: #2a2a40cc;
+}
+
+/* Add Transaction */
+.add-transaction {
+  margin-bottom: 30px;
+}
+
+.add-transaction h2 {
+  margin-bottom: 10px;
+}
+
+.add-transaction input {
+  width: calc(50% - 12px);
+  margin: 5px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.add-transaction button {
+  margin-top: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-transaction button:hover {
+  background-color: #1976d2;
+}
+
+/* Transactions */
+.transactions h2 {
+  margin-bottom: 10px;
+}
+
+.transactions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transactions li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: #f1f1f1;
+  transition: 0.3s ease;
+}
+
+.transactions li.income {
+  color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.transactions li.expense {
+  color: #c62828;
+  background: #ffebee;
+}
+
+.dark .transactions li.income {
+  background: #1b5e20;
+  color: #c8e6c9;
+}
+
+.dark .transactions li.expense {
+  background: #b71c1c;
+  color: #ffcdd2;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add-transaction input {
+    width: 100%;
+  }
+}
